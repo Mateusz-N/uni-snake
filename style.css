@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("https://images.pexels.com/photos/6060914/pexels-photo-6060914.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+main, #gameContainer {
+    display: flex;
+    gap: 16px;
+}
+main {
+    flex-direction: column;
+    align-items: center;
+}
+#header {
+    width: fit-content;
+    padding: 8px 16px 16px 16px;
+    font-size: 2.5rem;
+    font-style: italic;
+    line-height: 2.5rem;
+    text-shadow:    2px 2px 4px seagreen,
+                    6px 6px 4px black;
+}
+#header, #game, #sidePanel {
+    border-radius: 16px;
+    border: 4px double olivedrab;
+    background-color: rgb(100, 70, 20);
+    color: olivedrab;
+    overflow: hidden;
+}
+#game {
+    position: relative;
+    border-spacing: 0;
+}
+td {
+    border: 1px solid rgb(90, 60, 10);
+}
+td:first-child {
+    border-left-color: transparent;
+}
+td:last-child {
+    border-right-color: transparent;
+}
+tr:first-child > td {
+    border-top-color: transparent;
+}
+tr:last-child > td{
+    border-bottom-color: transparent;
+}
+.snake, .food, .obstacle, .portal {
+    position: absolute;
+    z-index: 1;
+}
+#gameOverlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(4px);
+    z-index: 2;
+    text-shadow:    2px 2px 2px black,
+                    1px 1px 1px black;
+}
+#gameOverlay em {
+    color: seagreen;
+}
+#gameOver {
+    color: firebrick;
+}
+#resultsForm, #resultsTable {
+    padding: 4px 0;
+}
+input[type = "text"] {
+    border-radius: 8px;
+    background-color: rgb(100, 50, 0);
+}
+input[type = "text"], ::placeholder {
+    color: palegreen;
+}
+input[type = "button"] {
+    padding: 2px 4px;
+    font-weight: bold;
+    background-color: rgb(80, 40, 0);
+    color: seagreen;
+    cursor: pointer;
+    border-color: olivedrab;
+}
+#newPB {
+    display: none;
+    color: goldenrod;
+}
+#resultsTable {
+    display: none;
+    width: 50%;
+}
+#resultsTable * {
+    border: none;
+}
+#resultsTable th {
+    color: seagreen;
+}
+.playerResult {
+    font-weight: bold;
+}
+.playerScore {
+    position: relative;
+}
+.playerScoreIndicator {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% + 4px);
+    font-size: 0.75rem;
+    font-weight: normal;
+    font-style: italic;
+    white-space: nowrap;
+}
+#sidePanel {
+    display: flex;
+    flex-direction: column;
+}
+#sidePanel h2 {
+    grid-column: 1/-1;
+}
+#sidePanel hr {
+    margin: 0 4px;
+    border-color: rgb(100, 50, 0);
+}
+#controlKeys {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-rows: 1fr;
+    column-gap: 8px;
+    align-items: center;
+    padding: 0 16px;
+}
+#controlKeys img {
+    width: 48px;
+    grid-column: 1/2;
+    justify-self: right;
+}
+#controlKeys p {
+    grid-column: 2/3;
+    justify-self: left;
+}
+#scorePanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "icon" type = "image/x-icon" href = "https://www.reshot.com/preview-assets/icons/3LWSGUAJCE/snake-3LWSGUAJCE.svg">
+        <link rel = "stylesheet" type = "text/css" href = "./style.css">
+        <title>Lizard King</title>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src = "./script.js"></script>
+</head>
+<body>
+    <main>
+        <h1 id = "header">Lizard King</h1>
+        <div id = "gameContainer">
+            <table id = "game" width = "520" height = "520">
+                <tbody>
+                    <!-- Plansza -->
+                </tbody>
+            </table>
+            <div id = "sidePanel">
+                <div id = "controlPanel">
+                    <h2>Sterowanie</h2>
+                    <div id = "controlKeys">
+                        <img src = "./resources/cursor-left.png" alt = "Left arrow key"><p> — skręt w lewo</p>
+                        <img src = "./resources/cursor-right.png" alt = "Right arrow key"><p> — skręt w prawo</p>
+                        <img src = "./resources/enter.png" alt = "Enter"><p> — Rozpocznij grę</p>
+                        <img src = "./resources/esc.png" alt = "Escape"><p> — Zakończ grę</p>
+                        <img src = "./resources/spacebar.png" alt = "Spacebar"><p> — pauza</p>
+                    </div>
+                </div>
+                <hr/>
+                <div id = "scorePanel">
+                    <h2>Wynik:</h2>
+                    <h3 id = 'score'></h3>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
